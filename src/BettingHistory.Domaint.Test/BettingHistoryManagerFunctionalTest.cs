@@ -19,9 +19,17 @@ namespace BettingHistory.Domaint.Test
 		}
 
 		[Test]
-		public void test()
+		public void should_get_unusual_settled_winnings()
 		{
-			var test = _manager.GetUnusualWinnings();
+			var items = _manager.GetSettledUnusualWinnings();
+			Assert.NotNull(items);
+		}
+
+		[Test]
+		public void should_get_unusual_unsettled_winnings()
+		{
+			var items = _manager.GetUnSettledUnusualWinnings();
+			Assert.NotNull(items);
 		}
 	}
 }

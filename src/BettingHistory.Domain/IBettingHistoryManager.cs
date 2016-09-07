@@ -9,6 +9,7 @@ namespace BettingHistory.Domain
 {
 	public interface IBettingHistoryManager
 	{
-		List<UnusualWinning> GetUnusualWinnings();
+		List<UnusualWinning> GetSettledUnusualWinnings();
+		List<UnusualWinning> GetUnSettledUnusualWinnings();
 	}
 }
