@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BettingHistory.Model
 {
-	public class Settled
+	public class BetHistory
 	{
 		public int Customer { get; set; }
 		public int Event { get; set; }

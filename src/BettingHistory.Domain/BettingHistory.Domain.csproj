@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{48617D65-C99A-4230-A960-9C852E30A223}</ProjectGuid>
+    <ProjectGuid>{7C09712B-177C-4B03-86A0-7178FFB03E02}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BettingHistory.Model</RootNamespace>
-    <AssemblyName>BettingHistory.Model</AssemblyName>
+    <RootNamespace>BettingHistory.Domain</RootNamespace>
+    <AssemblyName>BettingHistory.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,8 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BettingHistoryManager.cs" />
+    <Compile Include="IBettingHistoryManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BetHistory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BettingHistory.Dto\BettingHistory.Dto.csproj">
+      <Project>{6095D9C8-B5C3-4833-8F6E-8EEFC1B657D4}</Project>
+      <Name>BettingHistory.Dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BettingHistory.Infrastructure\BettingHistory.Infrastructure.csproj">
+      <Project>{44173AE4-DA06-4258-8218-03D7BA74B044}</Project>
+      <Name>BettingHistory.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BettingHistory.Model\BettingHistory.Model.csproj">
+      <Project>{48617d65-c99a-4230-a960-9c852e30a223}</Project>
+      <Name>BettingHistory.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

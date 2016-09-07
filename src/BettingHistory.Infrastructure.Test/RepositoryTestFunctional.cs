@@ -11,8 +11,8 @@ namespace BettingHistory.Infrastructure.Test
 	[TestFixture]
 	public class RepositoryTestFunctional
 	{
-		Repository _repository = new Repository();
-		List<Settled> _settled = new List<Settled>();
+		readonly Repository _repository = new Repository();
+		List<BetHistory> _settled = new List<BetHistory>();
 
 		[OneTimeSetUp]
 		public void Setup()

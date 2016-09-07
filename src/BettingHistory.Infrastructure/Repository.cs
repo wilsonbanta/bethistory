@@ -12,15 +12,15 @@ namespace BettingHistory.Infrastructure
 {
 	public class Repository : IRepository
 	{
-		public List<Settled> GetSettledHistory()
+		public List<BetHistory> GetSettledHistory()
 		{
-			var result = new List<Settled>();
+			var result = new List<BetHistory>();
 			using (TextReader reader = File.OpenText(System.AppDomain.CurrentDomain.BaseDirectory + "\\" + ConfigurationManager.AppSettings["Settled.Csv"]))
 			{
 				var csv = new CsvReader(reader);
 				while (csv.Read())
 				{
-					result.Add(new Settled
+					result.Add(new BetHistory
 					{
 						Customer = csv.GetField<int>(0),
 						Event = csv.GetField<int>(1),
@@ -34,9 +34,26 @@ namespace BettingHistory.Infrastructure
 			return result;
 		}
 
-		public List<UnSettled> GetUnSettleds()
+		public List<BetHistory> GetUnSettleds()
 		{
-			throw new NotImplementedException();
+			var result = new List<BetHistory>();
+			using (TextReader reader = File.OpenText(System.AppDomain.CurrentDomain.BaseDirectory + "\\" + ConfigurationManager.AppSettings["Unsettled.Csv"]))
+			{
+				var csv = new CsvReader(reader);
+				while (csv.Read())
+				{
+					result.Add(new BetHistory
+					{
+						Customer = csv.GetField<int>(0),
+						Event = csv.GetField<int>(1),
+						Participant = csv.GetField<int>(2),
+						Stake = csv.GetField<decimal>(3),
+						Win = csv.GetField<decimal>(4)
+					});
+				}
+			}
+
+			return result;
 		}
 	}
 }
