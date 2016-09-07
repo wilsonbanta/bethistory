@@ -6,15 +6,17 @@ namespace BettingHistory.Web.Controllers
 {
 	public class BetHistoryController : Controller
 	{
-		IBettingHistoryManager _manager = new BettingHistoryManager();
+		readonly IBettingHistoryManager _manager = new BettingHistoryManager();
 		// GET: BetHistory
 		public ActionResult Index()
 		{
-			var viewModel = new RiskViewModel();
-			viewModel.UnusualSettledWinnings = _manager.GetSettledUnusualWinnings();
-			viewModel.UnusualUnsettledWinnings = _manager.GetUnSettledUnusualWinnings();
-			viewModel.AverageBetsRisks = _manager.GetAverageBetsRisks();
-			viewModel.HighWinningStakes = _manager.GetHighWinningStakesFromUnsettled();
+			var viewModel = new RiskViewModel
+			{
+				UnusualSettledWinnings = _manager.GetSettledUnusualWinnings(),
+				UnusualUnsettledWinnings = _manager.GetUnSettledUnusualWinnings(),
+				AverageBetsRisks = _manager.GetAverageBetsRisks(),
+				HighWinningStakes = _manager.GetHighWinningStakesFromUnsettled()
+			};
 			return View(viewModel);
 		}
 	}
