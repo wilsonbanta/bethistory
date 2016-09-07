@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AverageBetsRisk.cs" />
+    <Compile Include="HighWinningStake.cs" />
     <Compile Include="UnusualWinning.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -11,5 +11,7 @@ namespace BettingHistory.Domain
 	{
 		List<UnusualWinning> GetSettledUnusualWinnings();
 		List<UnusualWinning> GetUnSettledUnusualWinnings();
+		List<AverageBetsRisk> GetAverageBetsRisks();
+		List<HighWinningStake> GetHighWinningStakesFromUnsettled();
 	}
 }

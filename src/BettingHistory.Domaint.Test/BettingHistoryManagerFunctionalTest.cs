@@ -31,5 +31,19 @@ namespace BettingHistory.Domaint.Test
 			var items = _manager.GetUnSettledUnusualWinnings();
 			Assert.NotNull(items);
 		}
+
+		[Test]
+		public void should_get_average_bet_risk()
+		{
+			var items = _manager.GetAverageBetsRisks();
+			Assert.NotNull(items);
+		}
+
+		[Test]
+		public void should_get_high_winning_risk()
+		{
+			var items = _manager.GetHighWinningStakesFromUnsettled();
+			Assert.NotNull(items);
+		}
 	}
 }
