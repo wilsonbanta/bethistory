@@ -18,6 +18,7 @@ namespace BettingHistory.Web.Controllers
 			viewModel.UnusualSettledWinnings = _manager.GetSettledUnusualWinnings();
 			viewModel.UnusualUnsettledWinnings = _manager.GetUnSettledUnusualWinnings();
 			viewModel.AverageBetsRisks = _manager.GetAverageBetsRisks();
+			viewModel.HighWinningStakes = _manager.GetHighWinningStakesFromUnsettled();
 			return View(viewModel);
 		}
 	}
