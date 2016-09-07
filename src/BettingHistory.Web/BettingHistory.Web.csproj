@@ -154,6 +154,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\RiskViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -181,11 +182,19 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BettingHistory.Domain\BettingHistory.Domain.csproj">
+      <Project>{7c09712b-177c-4b03-86a0-7178ffb03e02}</Project>
+      <Name>BettingHistory.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BettingHistory.Dto\BettingHistory.Dto.csproj">
+      <Project>{6095d9c8-b5c3-4833-8f6e-8eefc1b657d4}</Project>
+      <Name>BettingHistory.Dto</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

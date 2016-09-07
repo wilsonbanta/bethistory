@@ -1,3 +1,38 @@
 ﻿
-
-<h2>title</h2>
+@model BettingHistory.Web.Models.RiskViewModel
+<h3>Settled</h3>
+<div class="panel panel-danger">
+	<div class="panel-heading">Winnings with unsual rate</div>
+	<div class="panel-body">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Customer</th>
+					<th>Bets</th>
+					<th>Winings</th>
+					<th>Percetage</th>
+				</tr>
+			</thead>
+			<tbody>
+			@foreach (var unusualWinning in Model.UnusualSettledWinnings)
+			{
+				<tr>
+					<td>@unusualWinning.Customer</td>
+					<td>@unusualWinning.NumberOfBet</td>
+					<td>@unusualWinning.NumberOfWinnings</td>
+					<td>@unusualWinning.Percentage.ToString("F")</td>
+				</tr>
+			}
+			</tbody>
+		</table>
+	</div>
+</div>
+<h3>Unsettled</h3>
+<div class="panel panel-danger">
+	<div class="panel-heading">
+		<h3 class="panel-title">Panel title</h3>
+	</div>
+	<div class="panel-body">
+		Panel content
+	</div>
+</div>
