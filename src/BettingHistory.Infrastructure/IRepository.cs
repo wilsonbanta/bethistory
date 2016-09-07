@@ -9,7 +9,7 @@ namespace BettingHistory.Infrastructure
 {
 	public interface IRepository
 	{
-		IList<Settled> GetSettledHistory();
-		IList<UnSettled> GetUnSettleds();
+		List<Settled> GetSettledHistory();
+		List<UnSettled> GetUnSettleds();
 	}
 }

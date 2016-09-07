@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BettingHistory.Model", "Bet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BettingHistory.Web", "BettingHistory.Web\BettingHistory.Web.csproj", "{05E7A2A4-0F9E-454C-A3E3-74613AB5EF18}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BettingHistory.Infrastructure", "BettingHistory.Infrastructure\BettingHistory.Infrastructure.csproj", "{44173AE4-DA06-4258-8218-03D7BA74B044}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BettingHistory.Infrastructure.Test", "BettingHistory.Infrastructure.Test\BettingHistory.Infrastructure.Test.csproj", "{3E78E107-4F86-4A32-82BB-BD6A3AF1ED4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{05E7A2A4-0F9E-454C-A3E3-74613AB5EF18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05E7A2A4-0F9E-454C-A3E3-74613AB5EF18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05E7A2A4-0F9E-454C-A3E3-74613AB5EF18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44173AE4-DA06-4258-8218-03D7BA74B044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44173AE4-DA06-4258-8218-03D7BA74B044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44173AE4-DA06-4258-8218-03D7BA74B044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44173AE4-DA06-4258-8218-03D7BA74B044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E78E107-4F86-4A32-82BB-BD6A3AF1ED4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E78E107-4F86-4A32-82BB-BD6A3AF1ED4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E78E107-4F86-4A32-82BB-BD6A3AF1ED4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E78E107-4F86-4A32-82BB-BD6A3AF1ED4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
