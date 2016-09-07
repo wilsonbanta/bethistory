@@ -16,6 +16,8 @@ namespace BettingHistory.Web.Controllers
 		{
 			var viewModel = new RiskViewModel();
 			viewModel.UnusualSettledWinnings = _manager.GetSettledUnusualWinnings();
+			viewModel.UnusualUnsettledWinnings = _manager.GetUnSettledUnusualWinnings();
+			viewModel.AverageBetsRisks = _manager.GetAverageBetsRisks();
 			return View(viewModel);
 		}
 	}
